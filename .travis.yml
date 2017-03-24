@@ -6,7 +6,11 @@ php:
 os:
     - linux
 
+before_script:
+    - composer install
+
 script:
+    - rm -rf vendor composer.lock node_modules 
     - zip -r latest.zip ./*
 
 deploy:
