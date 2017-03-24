@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use App\Models\User;
+use Mylar\Models\User;
 
 class DatabaseSeeder extends Seeder
 {
