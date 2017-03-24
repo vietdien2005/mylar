@@ -11,7 +11,7 @@ before_script:
 
 script:
     - rm -rf vendor composer.lock node_modules 
-    - zip -r latest.zip ./*
+    - zip -r latest.zip .
 
 deploy:
     provider: releases
