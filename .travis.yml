@@ -4,9 +4,24 @@ php:
     - 5.6
     - 7.0
 
+os:
+    - linux
+
 before_script:
     - composer install
 
-script: 
-    - zip -r latest.zip ./* 
+script:
+    - zip -r latest.zip ./*
 
+deploy:
+    provider: releases
+    api_key:
+        secure: dLy3qepm0zI2eNkI5j4IY4Z4hpmeGuEeYSVA2U3kD1PQYJCFXqNPO2L0dytAdGmRb6beKIRwgqr22XkViRTU3YIEsg6hn5PvrbvSJMG48u6kcsEO5ryzhNZszjS4EmUtc9C02ZpXNuLE+sN4Lb0NmBTjwTsttO0CyRUqjLY6WKHDjQdeNKHsI039OtSWk7s0CFPJR14xiKvDK68EclbCjkRoh6/BtVsUhyKdJJp+ePHmr0OEHh9R4sFMmBc5GszmIeFZjAUenzbS9WVGPqewyFiSw78cpECQJhlA4FUR53YBber6P+XjKS8ZlefAqQbzw8gWo9wJr9cM7qYXr60NIhUJHw/D5vmTe/KlY05a0iLMsLsFpwbPgTMx+gYw+7hMUBD08qkTNtrUzp3AfBGYGJ07em+eDX5pxG+6CP90nUVWKLynCZ95VEUnttgsTL1K12eKeMFkjH+Wm0pJA8R3DB88pxHqjbp33gRACQ81KxbwYLQYVu1vOPiAOgQNnjMFRZIkSBbYjflZ2E7t0AGPsHCfms/3MVV51XnUq1oGEGUty5n9UFl3ZGne214g4pTFY64EhXevoAKg9Dxyplo7QAxEi+ABht6xIcgWAoxGoG/YYU6Cz+jX9BfZ4mUfH7Z40ZJ2NNR57hoAbDZCRBRVjOacLFg/xk/a7eoboYqmxvA=
+    file: ./latest.zip
+    skip_cleanup: true
+    on:
+        tags: true
+
+env:
+    global:
+        secure: dLy3qepm0zI2eNkI5j4IY4Z4hpmeGuEeYSVA2U3kD1PQYJCFXqNPO2L0dytAdGmRb6beKIRwgqr22XkViRTU3YIEsg6hn5PvrbvSJMG48u6kcsEO5ryzhNZszjS4EmUtc9C02ZpXNuLE+sN4Lb0NmBTjwTsttO0CyRUqjLY6WKHDjQdeNKHsI039OtSWk7s0CFPJR14xiKvDK68EclbCjkRoh6/BtVsUhyKdJJp+ePHmr0OEHh9R4sFMmBc5GszmIeFZjAUenzbS9WVGPqewyFiSw78cpECQJhlA4FUR53YBber6P+XjKS8ZlefAqQbzw8gWo9wJr9cM7qYXr60NIhUJHw/D5vmTe/KlY05a0iLMsLsFpwbPgTMx+gYw+7hMUBD08qkTNtrUzp3AfBGYGJ07em+eDX5pxG+6CP90nUVWKLynCZ95VEUnttgsTL1K12eKeMFkjH+Wm0pJA8R3DB88pxHqjbp33gRACQ81KxbwYLQYVu1vOPiAOgQNnjMFRZIkSBbYjflZ2E7t0AGPsHCfms/3MVV51XnUq1oGEGUty5n9UFl3ZGne214g4pTFY64EhXevoAKg9Dxyplo7QAxEi+ABht6xIcgWAoxGoG/YYU6Cz+jX9BfZ4mUfH7Z40ZJ2NNR57hoAbDZCRBRVjOacLFg/xk/a7eoboYqmxvA=
