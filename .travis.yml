@@ -6,9 +6,6 @@ php:
 os:
     - linux
 
-before_script:
-    - composer install
-
 script:
     - zip -r latest.zip ./*
 
