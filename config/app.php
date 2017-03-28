@@ -171,11 +171,11 @@ return [
         /*
          * Application Service Providers...
          */
-        Mylar\Providers\AppServiceProvider::class,
-        Mylar\Providers\AuthServiceProvider::class,
-        // Mylar\Providers\BroadcastServiceProvider::class,
-        Mylar\Providers\EventServiceProvider::class,
-        Mylar\Providers\RouteServiceProvider::class,
+        App\Providers\AppServiceProvider::class,
+        App\Providers\AuthServiceProvider::class,
+        // App\Providers\BroadcastServiceProvider::class,
+        App\Providers\EventServiceProvider::class,
+        App\Providers\RouteServiceProvider::class,
 
     ],
 

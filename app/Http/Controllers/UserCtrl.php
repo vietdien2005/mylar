@@ -1,9 +1,9 @@
 <?php
 
-namespace Mylar\Http\Controllers;
+namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Mylar\Models\User;
+use App\Models\User;
 use Validator;
 
 class UserCtrl extends Controller
