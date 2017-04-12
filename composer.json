@@ -38,6 +38,14 @@
         "post-update-cmd": [
             "Illuminate\\Foundation\\ComposerScripts::postUpdate",
             "php artisan optimize"
+        ],
+        "reset": [
+            "php artisan clear-compiled",
+            "composer dump-autoload",
+            "php artisan optimize",
+            "php artisan migrate:reset",
+            "php artisan migrate",
+            "php artisan db:seed"
         ]
     },
     "config": {
