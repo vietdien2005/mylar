@@ -7,7 +7,7 @@ os:
 before_script:
 - composer install
 script:
-- rm -rf vendor composer.lock node_modules .git
+- rm -rf vendor composer.lock node_modules .git .travis.yml LICENSE yarn.lock
 - zip -r latest.zip .
 deploy:
   provider: releases
