@@ -4,4 +4,6 @@
 [![License](https://poser.pugx.org/vietdien2005/mylar/license)](https://packagist.org/packages/vietdien2005/mylar)
 ## My Laravel 
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/vietdien2005/mylar.svg)](https://greenkeeper.io/)
+
 Simple CMS Template with Laravel, run with mylar-installer 
